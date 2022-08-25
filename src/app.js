@@ -1,11 +1,13 @@
-var dateNow = new Date();
-var compromise = new Date(2022, 7, 25);
-var d = new Date();
+const dateNow = new Date();
+const compromise = new Date(2022, 8, 25, 17, 57);
 
-d.setFullYear(compromise.getFullYear() - dateNow.getFullYear());
-d.setMonth(compromise.getMonth() - dateNow.getMonth());
-d.setDate(compromise.getDate() - dateNow.getDate())
-d.setHours(compromise.getHours() - dateNow.getHours());
-d.setMinutes(compromise.getMinutes() - dateNow.getMinutes());
-d.setSeconds(compromise.getSeconds() - dateNow.getSeconds());
+const gap = {
+    Year: Math.abs(compromise.getFullYear() - dateNow.getFullYear()),
+    Month: Math.abs(compromise.getMonth() - dateNow.getMonth()),
+    Day: Math.abs(compromise.getDate() - dateNow.getDate()),
+    Hours: Math.abs(compromise.getHours() - dateNow.getHours()),
+    Minutes: Math.abs(compromise.getMinutes() - dateNow.getMinutes()),
+    Secods: Math.abs(compromise.getSeconds() - dateNow.getSeconds()),
+};
 
+console.log(gap)
