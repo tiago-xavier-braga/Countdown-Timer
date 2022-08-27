@@ -20,7 +20,7 @@ main{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 60vh;
+    height: 120vh;
     width: 100%;
 }
 .navbar{
@@ -28,67 +28,72 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: -8% 2% 2% 2%;
-    border-radius: 10px;
     height: 10vh;
-    width: 90%;
+    width: 100%;
     background-color: var(--background-color);
+    border-bottom: 1px solid #adadad;
 }
 .navbar a {
-    text-transform: uppercase;
+    text-decoration: none;
     margin: 4%;
     color: var(--color-text);
 }
 .info-project{
     display: flex;
     flex-direction: column;
-    margin: 0%;
-    height: 80vh;
+    margin: 4% 0% 4% 0%;
+    height: 50vh;
     width: 100%;
     align-items: center;
     text-align: center;
 }
 .info-project h1{
-    margin: 8% 4%;
+    margin: 12% 4%;
     font-size: 200%;
 }
 .info-project p{
-    margin: 4%;
+    margin: 4% 2% 5% 2%;
     font-size: large;
 }
-.arrow, .arrow:before{
-    position: fixed;
-    top: 80%;
-    left: 50%;
+.input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 35vh;
+    padding: 4px;
+    border: 1px solid #adadad;
+    border-radius: 10px;
 }
-.arrow{
-    width: 40px;
-    height: 40px;
-    margin: -10px 0 0 -20px;
-    transform: rotate(45deg);
-    border-left: none;
-    border-top: none;
-    border-right: 2px #000 solid;
-    border-bottom: 2px #000 solid;
+.input-box input{
+    outline: none;
+    font-size: larger;
+    font-family: 'Aboreto', cursive;
 }
-.arrow:before{
-    content: '';
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    margin: -10px 0 0 -10px;
-    border-left: none;
-    border-top: none;
-    border-right: 1px #000 solid;
-    border-bottom: 1px #000 solid;
-    animation: arrow 2s infinite;
+.nameEvent{
+    height: 6vh;
+    border: none;
+    border-bottom: 1px solid #adadad;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    margin-bottom: 10%;
+    width: 80%;
+    text-align: center;
 }
-@keyframes arrow{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-    transform: translate(-10px, -10px);
-  }
+.nameEvent::placeholder{
+    color: #000;
+}
+.dateEvent{
+    border: none;
+    width: 80%;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 10%;
+}
+.btnStart{
+    width: 30%;
+    height: 6vh;
+    outline: none;
+    border: none;
+    background-color: #F4E04D;
 }
