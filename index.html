@@ -21,8 +21,8 @@
             </div>
             <div class="input-box">
                 <input type="text" name="event" id="nameEvent" class="nameEvent" placeholder="Name event">
-                <input type="datetime-local" name="dateEvent" id="dateEvent" class="dateEvent">
-                <input type="button" value="Start" class="btnStart" onclick="Start()">
+                <input type="datetime-local" name="dateEvent" id="dateEvent" onchange="Start()" class="dateEvent" min="var dateOld = new Date()">
+                <input type="button" value="Start" class="btnStart">
             </div>
         </main>
         <script src="src/app.js"></script>
