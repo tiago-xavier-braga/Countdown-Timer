@@ -19,10 +19,10 @@
                 <h1>Hourglass for your life</h1>
                 <p>Do not lose your commitment</p>
             </div>
-            <div class="input-box">
+            <div class="input-box" id="input-box">
                 <input type="text" name="event" id="nameEvent" class="nameEvent" placeholder="Name event">
                 <input type="datetime-local" name="dateEvent" id="dateEvent" onchange="Start()" class="dateEvent" min="var dateOld = new Date()">
-                <input type="button" value="Start" class="btnStart">
+                <input type="button" value="Start" class="btnStart" id="btnStart" onclick="Start()">
             </div>
         </main>
         <script src="src/app.js"></script>

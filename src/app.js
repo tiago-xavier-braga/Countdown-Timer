@@ -4,6 +4,9 @@ dateValueMin.min = new Date().toISOString().slice(0,new Date().toISOString().las
 function Start(){
     const dateNow = new Date();
     const compromise = new Date(document.getElementById('dateEvent').value);
+    const nameEvent = document.getElementById('nameEvent');
+    let box = document.getElementById('input-box');
+
     let gap = {
         Year: Math.abs(compromise.getFullYear() - dateNow.getFullYear()),
         Month: Math.abs(compromise.getMonth() - dateNow.getMonth()),
@@ -13,6 +16,12 @@ function Start(){
         Second: Math.abs(compromise.getSeconds() - dateNow.getSeconds()),
     };
 
+    if(nameEvent.value == ''){
+        alert('Name Event Invalid !');
+
+        return 0;
+    }
+    box.innerHTML = '';
     setInterval(() => {
         gap.Second -= 1;
         if(gap.Second < 0){
@@ -37,10 +46,14 @@ function Start(){
                     }
                 }
             }
-
         }
+        box.innerHTML = '';
+        box.innerHTML += `
+            <h1>${nameEvent.value}</h1> 
+            <h2>${gap.Day}/${gap.Month}/${gap.Year} and ${gap.Hour}:${gap.Minute}:${gap.Second}</h2>
+        `;
 
-    
-        console.log(`${gap.Day}/${gap.Month}/${gap.Year} and ${gap.Hour}:${gap.Minute}:${gap.Second}`)
+        nameEvent.disabled = true;
+        document.getElementById('btnStart').disabled = true;
     }, 1000);
 }
