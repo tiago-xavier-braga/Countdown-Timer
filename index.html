@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-egde">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="public/static/index.css">
+        <link rel="stylesheet" href="public/static/responsive.css">
     </head>
     <body>
         <header>
@@ -12,8 +13,8 @@
         </header>
         <main>
             <div class="navbar">
-                <a href="">GitHub</a>
-                <a href="">Linkedin</a>
+                <a href="https://github.com/tiago-xavier-braga/Countdown-Timer">GitHub</a>
+                <a href="https://www.linkedin.com/in/tiago-xavier-braga/">Linkedin</a>
             </div>
             <div class="info-project">
                 <h1>Hourglass for your life</h1>
@@ -21,7 +22,7 @@
             </div>
             <div class="input-box" id="input-box">
                 <input type="text" name="event" id="nameEvent" class="nameEvent" placeholder="Name event">
-                <input type="datetime-local" name="dateEvent" id="dateEvent" onchange="Start()" class="dateEvent" min="var dateOld = new Date()">
+                <input type="datetime-local" name="dateEvent" id="dateEvent" class="dateEvent" min="var dateOld = new Date()">
                 <input type="button" value="Start" class="btnStart" id="btnStart" onclick="Start()">
             </div>
         </main>
